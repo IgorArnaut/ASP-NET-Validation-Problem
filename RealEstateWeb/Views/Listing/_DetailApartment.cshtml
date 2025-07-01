@@ -1,0 +1,24 @@
+﻿@model Apartment
+
+<div>
+    <h3>Informacije o stanu</h3>
+    <ul>
+        <li>Sprat: @Model.Floor/@Model.Building.NumOfFloors</li>
+        <li>
+            Površina: @Model.Area m<sup>2</sup>
+        </li>
+        <li>Broj soba: @Model.NumOfRooms</li>
+        <li>Stanje: @Model.State</li>
+        <li>Grejanje: @Model.Heating</li>
+        <li>Opremljenost: @Model.Equipment</li>
+        <li>
+            Stvari:
+            <ul>
+                @foreach (var item in Model.Items)
+                {
+                    <li>@item.Name</li>
+                }
+            </ul>
+        </li>
+    </ul>
+</div>

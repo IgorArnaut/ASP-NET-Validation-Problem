@@ -1,0 +1,21 @@
+﻿@model Listing
+
+<div>
+    @{ var apartment = Model.Apartment; }
+    <h3>@apartment.Building.Address</h3>
+    <h4>@apartment.Price EUR</h4>
+    <p>
+        @if (Model.UpdatedAt.CompareTo(Model.CreatedAt) > 0)
+        {
+            @:Ažuriran: @Model.UpdatedAt.ToString("dd.MM.yyyy HH:MM")
+        }
+        else
+        {
+            @:Postavljen: @Model.CreatedAt.ToString("dd.MM.yyyy HH:MM")
+        }
+    </p>
+    <p>
+        <a asp-controller="Listing" asp-action="Update">Izmeni</a> |
+        <a asp-controller="Listing" asp-action="Delete">Ukloni</a>
+    </p>
+</div>

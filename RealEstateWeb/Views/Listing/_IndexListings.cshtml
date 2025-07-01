@@ -1,0 +1,27 @@
+﻿@model ICollection<Listing>
+@if (Model.Count() != 0)
+{
+    <div class="row row-cols-1 row-cols-md-2">
+        @foreach (var listing in Model)
+        {
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">@listing.Apartment.Price EUR</div>
+                    <div class="card-body">
+                        <a class="card-title h3 fw-bold">@listing.Title</a>
+                    </div>
+                    <div class="card-footer">
+                        @if (listing.UpdatedAt.CompareTo(listing.CreatedAt) > 0)
+                        {
+                            @:Ažuriran: @listing.UpdatedAt.ToString("dd.MM.yyyy HH:MM")
+                        }
+                        else
+                        {
+                            @:Postavljen: @listing.CreatedAt.ToString("dd.MM.yyyy HH:MM")
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

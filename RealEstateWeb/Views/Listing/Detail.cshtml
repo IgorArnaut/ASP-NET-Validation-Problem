@@ -1,0 +1,8 @@
+﻿@model Listing
+
+<h2>@Model.Title</h2>
+<partial name="_DetailMain" />
+<partial name="_DetailBuilding" for="Apartment.Building" />
+<partial name="_DetailApartment" for="Apartment" />
+<partial name="_DetailTerms" for="Terms" />
+<p>@Model.Description</p>

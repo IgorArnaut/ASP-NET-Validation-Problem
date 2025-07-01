@@ -1,0 +1,13 @@
+﻿@model Building
+
+<div>
+    <h3>Informacije o zgradi</h3>
+    <ul>
+        <li>Izgrađen: @Model.YearConstrcuted</li>
+        @if (Model.Parking) { <li>Parking</li> }
+        @if (Model.Garage) { <li>Garaža</li> }
+        @if (Model.Elevator) { <li>Lift</li> }
+        @if (Model.Cctv) { <li>Video nadzor</li> }
+        @if (Model.Intercom) { <li>Interfon</li> }
+    </ul>
+</div>

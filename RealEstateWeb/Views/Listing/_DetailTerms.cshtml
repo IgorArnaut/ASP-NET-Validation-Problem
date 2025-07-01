@@ -1,0 +1,13 @@
+﻿@model Terms
+
+<div>
+    <h3>Uslovi zakupa</h3>
+    <ul>
+        <li>Useljiv: @Model.DateAvailable.ToString("dd.MM.yyyy")</li>
+        @if (Model.Deposit) { <li>Depozit</li> }
+        @if (Model.ForStudents) { <li>Za studente</li> }
+        @if (Model.ForWorkers) { <li>Za radnike</li> }
+        @if (Model.SmokingAllowed) { <li>Dozvoljeno pušenje</li> }
+        @if (Model.PetsAllowed) { <li>Dozvoljeni ljubimci</li> }
+    </ul>
+</div>
