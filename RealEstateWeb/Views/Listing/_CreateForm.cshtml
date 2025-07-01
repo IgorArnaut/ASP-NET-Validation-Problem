@@ -4,39 +4,39 @@
 <form class="mb-3" asp-controller="Listing" asp-action="Create" method="post">
     <fieldset>
         <legend class="fs-4">Informacije o zgradi</legend>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Address.City">Mesto</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Address.City">Mesto</label>
+            <div class="col-sm-10">
                 <select class="form-select" asp-for="Address.City" asp-items="Model.AllCities"></select>
             </div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Address.Street">Ulica</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Address.Street">Ulica</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="text" asp-for="Address.Street">
+                <span class="form-text text-danger" asp-validation-for="Address.Street"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Address.Street"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Address.StreetNum">Broj ulice</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Address.StreetNum">Broj ulice</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="text" asp-for="Address.StreetNum">
+                <span class="form-text text-danger" asp-validation-for="Address.StreetNum"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Address.StreetNum"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Building.YearConstructed">Izgrađen</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Building.YearConstructed">Izgrađen</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="number" asp-for="Building.YearConstructed">
+                <span class="form-text text-danger" asp-validation-for="Building.YearConstructed"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Building.YearConstructed"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Building.NumOfFloors">Spratnost</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Building.NumOfFloors">Spratnost</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="number" asp-for="Building.NumOfFloors">
+                <span class="form-text text-danger" asp-validation-for="Building.NumOfFloors"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Building.NumOfFloors"></div>
         </div>
         <div class="form-check-inline">
             <label class="form-check-label" asp-for="Building.Parking">Parking</label>
@@ -61,37 +61,37 @@
     </fieldset>
     <fieldset>
         <legend class="fs-4">Informacije o stanu</legend>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.Floor">Sprat:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.Floor">Sprat:</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="number" asp-for="Apartment.Floor">
+                <span class="form-text text-danger" asp-validation-for="Apartment.Floor"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Apartment.Floor"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.Area">Površina:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.Area">Površina:</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="number" asp-for="Apartment.Area">
+                <span class="form-text text-danger" asp-validation-for="Apartment.Area"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Apartment.Area"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.Price">Cena:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.Price">Cena:</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="number" asp-for="Apartment.Price">
+                <span class="form-text text-danger" asp-validation-for="Apartment.Price"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Apartment.Price"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.NumOfRooms">Broj soba:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.NumOfRooms">Broj soba:</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="number" asp-for="Apartment.NumOfRooms">
+                <span class="form-text text-danger" asp-validation-for="Apartment.NumOfRooms"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Apartment.NumOfRooms"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <div class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.State">Stanje:</div>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.State">Stanje:</label>
+            <div class="col-sm-10">
                 <select class="form-select" asp-for="Apartment.State" maxlength="255">
                     <option value="Izvorno">Izvorno</option>
                     <option value="Novo">Novo</option>
@@ -100,9 +100,9 @@
                 </select>
             </div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.Heating">Grejanje:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.Heating">Grejanje:</label>
+            <div class="col-sm-10">
                 <select class="form-select" asp-for="Apartment.Heating" maxlength="255">
                     <option value="Gradsko">Gradsko</option>
                     <option value="Etažno">Etažno</option>
@@ -113,9 +113,9 @@
                 </select>
             </div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Apartment.Equipment">Opremljenost:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Apartment.Equipment">Opremljenost:</label>
+            <div class="col-sm-10">
                 <select class="form-select" asp-for="Apartment.Equipment" maxlength="255">
                     <option value="Namešten">Namešten</option>
                     <option value="Polunamešten">Polunamešten</option>
@@ -123,21 +123,21 @@
                 </select>
             </div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" for="items">Stvari:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="items">Stvari:</label>
+            <div class="col-sm-10">
                 <select class="form-select" asp-for="SelectedItemIds" asp-items="Model.Items" multiple></select>
             </div>
         </div>
     </fieldset>
     <fieldset>
         <legend class="fs-4">Uslovi zakupa</legend>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Terms.DateAvailable">Useljiv:</label>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Terms.DateAvailable">Useljiv:</label>
             <div class="col-lg-2 col-sm-4">
                 <input class="form-control" type="date" asp-for="Terms.DateAvailable">
+                <span class="form-text text-danger" asp-validation-for="Terms.DateAvailable"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Terms.DateAvailable"></div>
             <div class="form-check">
                 <label class="form-check-label" asp-for="Terms.Deposit">Depozit:</label>
                 <input class="form-check-input" type="checkbox" asp-for="Terms.Deposit">
@@ -162,19 +162,19 @@
     </fieldset>
     <fieldset>
         <legend class="fs-4">Oglas</legend>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Listing.Title">Naslov:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Listing.Title">Naslov:</label>
+            <div class="col-sm-10">
                 <input class="form-control" type="text" asp-for="Listing.Title">
+                <span class="form-text text-danger" asp-validation-for="Listing.Title"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Listing.Title"></div>
         </div>
-        <div class="row mb-3 align-items-center">
-            <label class="col-lg-1 col-sm-2 col-form-label" asp-for="Listing.Description">Opis:</label>
-            <div class="col-lg-2 col-sm-4">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" asp-for="Listing.Description">Opis:</label>
+            <div class="col-sm-10">
                 <textarea class="form-control" asp-for="Listing.Description" cols="40" rows="10"></textarea>
+                <span class="form-text text-danger" asp-validation-for="Listing.Description"></span>
             </div>
-            <div class="col-lg-3 col-sm-6 form-text text-danger" asp-validation-for="Listing.Description"></div>
         </div>
     </fieldset>
     <input class="btn btn-primary" type="submit" value="Postavi">
