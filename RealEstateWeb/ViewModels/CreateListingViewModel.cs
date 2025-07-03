@@ -8,8 +8,8 @@ namespace RealEstateWeb.ViewModels
         public AddressViewModel Address { get; set; }
         public BuildingViewModel Building { get; set; }
         public ApartmentViewModel Apartment { get; set; }
-        public IEnumerable<SelectListItem> Items { get; set; }
-        public IEnumerable<long> SelectedItemIds { get; set; }
+        public IEnumerable<SelectListItem> AllItems { get; set; }
+        public IEnumerable<long> Items { get; set; }
         public TermsViewModel Terms { get; set; }
         public ListingViewModel Listing { get; set; }
     }

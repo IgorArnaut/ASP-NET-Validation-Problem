@@ -8,8 +8,8 @@ namespace RealEstateWeb.Models
         public long Id { get; set; }
         public int Floor { get; set; }
         public int Area { get; set; }
-        public int Price { get; set; }
         public int NumOfRooms { get; set; }
+        public int Price { get; set; }
         public required string State { get; set; }
         public required string Heating { get; set; }
         public required string Equipment { get; set; }

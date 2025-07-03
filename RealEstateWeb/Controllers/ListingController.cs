@@ -33,7 +33,7 @@ namespace RealEstateWeb.Controllers
             CreateListingViewModel model = new()
             {
                 AllCities = new SelectList(_addressRepo.AllCities()),
-                Items = new SelectList(_itemRepo.FindAll(), "Id", "Name")
+                AllItems = new SelectList(_itemRepo.FindAll(), "Id", "Name")
             };
             return View(model);
         }
@@ -47,20 +47,24 @@ namespace RealEstateWeb.Controllers
         [HttpPost]
         public IActionResult Create(CreateListingViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                Address address = _addressRepo.FindOrCreate(model.Address);
-                Building building = _buildingRepo.FindOrCreate(address, model.Building);
-                List<Item> items = _itemRepo.FindByIdIn(model.SelectedItemIds);
-                Apartment apartment = _apartmentRepo.FindOrCreate(building, items, model.Apartment);
-                Terms terms = _termsRepo.FindOrCreate(model.Terms);
-                _listingRepo.Create(apartment, terms, model.Listing);
-                return RedirectToAction("Index");
+                foreach (var key in ModelState.Keys)
+                    Console.WriteLine($"{key}: {ModelState.GetValidationState(key)}");
+
+                model.AllCities = new SelectList(_addressRepo.AllCities());
+                model.AllItems = new SelectList(_itemRepo.FindAll(), "Id", "Name");
+                return View(model);
+
             }
 
-            model.AllCities = new SelectList(_addressRepo.AllCities());
-            model.Items = new SelectList(_itemRepo.FindAll(), "Id", "Name");
-            return View(model);
+            Address address = _addressRepo.FindOrCreate(model.Address);
+            Building building = _buildingRepo.FindOrCreate(address, model.Building);
+            List<Item> items = _itemRepo.FindByIdIn(model.Items);
+            Apartment apartment = _apartmentRepo.FindOrCreate(building, items, model.Apartment);
+            Terms terms = _termsRepo.FindOrCreate(model.Terms);
+            _listingRepo.Create(apartment, terms, model.Listing);
+            return RedirectToAction("Index");
         }
     }
 }

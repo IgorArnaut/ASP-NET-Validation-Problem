@@ -17,9 +17,9 @@ namespace RealEstateWeb.Repositories
                 Address = address,
                 YearConstrcuted = buildingVM.YearConstructed,
                 NumOfFloors = buildingVM.NumOfFloors,
+                Elevator = buildingVM.Elevator,
                 Parking = buildingVM.Parking,
                 Garage = buildingVM.Garage,
-                Elevator = buildingVM.Elevator,
                 Cctv = buildingVM.Cctv,
                 Intercom = buildingVM.Intercom
             };

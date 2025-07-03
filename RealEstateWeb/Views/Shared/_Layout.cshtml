@@ -16,10 +16,11 @@
 <body class="d-flex flex-column">
     <nav class="navbar navbar-expand-lg bg-success mb-3">
         <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link fw-bold text-light" asp-area="" asp-controller="Listing" asp-action="Index">ASP Nekretnine</a>
-                </li>
+            <a class="navbar-brand fw-bold text-light" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="/images/Microsoft_.NET_logo.svg.png" style="height: 32px;" alt="Logo" class="d-inline-block align-text-top">
+                Nekretnine
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link fw-bold text-light" asp-area="" asp-controller="Listing" asp-action="Index">Oglasi</a>
                 </li>
@@ -32,6 +33,7 @@
             </ul>
         </div>
     </nav>
+
     <main role="main" class="flex-grow-1">
         <div class="container">
             @RenderBody()

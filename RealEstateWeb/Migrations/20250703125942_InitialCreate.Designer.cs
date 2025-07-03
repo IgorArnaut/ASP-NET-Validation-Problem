@@ -12,7 +12,7 @@ using RealEstateWeb.Data;
 namespace RealEstateWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250630173138_InitialCreate")]
+    [Migration("20250703125942_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

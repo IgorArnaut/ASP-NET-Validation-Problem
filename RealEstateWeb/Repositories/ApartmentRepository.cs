@@ -14,8 +14,8 @@ namespace RealEstateWeb.Repositories
             var apartment = _context.Apartments.Where(a =>
                 a.Floor == apartmentModel.Floor &&
                 a.Area == apartmentModel.Area &&
-                a.Price == apartmentModel.Price &&
                 a.NumOfRooms == apartmentModel.NumOfRooms &&
+                a.Price == apartmentModel.Price &&
                 a.State == apartmentModel.State &&
                 a.Heating == apartmentModel.Heating &&
                 a.Equipment == apartmentModel.Equipment &&
@@ -24,8 +24,8 @@ namespace RealEstateWeb.Repositories
             {
                 Floor = apartmentModel.Floor,
                 Area = apartmentModel.Area,
-                Price = apartmentModel.Price,
                 NumOfRooms = apartmentModel.NumOfRooms,
+                Price = apartmentModel.Price,
                 State = apartmentModel.State,
                 Heating = apartmentModel.Heating,
                 Equipment = apartmentModel.Equipment,
